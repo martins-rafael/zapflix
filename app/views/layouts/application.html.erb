@@ -13,7 +13,12 @@
   <body class="text-white dark-gray-5">
     <main class="">
       <%= render 'sidebar' %>
+
       <div id="contentWrapper" class="container col-md-10 bg-dark-gray-5">
+        <% if notice %>
+          <%= render 'alert' %>
+        <% end %>
+
         <%= yield %>
       </div>
     </main>

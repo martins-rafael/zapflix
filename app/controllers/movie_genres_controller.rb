@@ -25,11 +25,9 @@ class MovieGenresController < ApplicationController
 
     respond_to do |format|
       if @movie_genre.save
-        format.html { redirect_to movie_genre_url(@movie_genre), notice: "Movie genre was successfully created." }
-        format.json { render :show, status: :created, location: @movie_genre }
+        format.html { redirect_to movie_genre_path, notice: "Gênero criado com sucesso!" }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @movie_genre.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -38,11 +36,9 @@ class MovieGenresController < ApplicationController
   def update
     respond_to do |format|
       if @movie_genre.update(movie_genre_params)
-        format.html { redirect_to movie_genre_url(@movie_genre), notice: "Movie genre was successfully updated." }
-        format.json { render :show, status: :ok, location: @movie_genre }
+        format.html { redirect_to movie_genres_path, notice: "Gênero atualizado com sucesso!" }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @movie_genre.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -52,8 +48,7 @@ class MovieGenresController < ApplicationController
     @movie_genre.destroy
 
     respond_to do |format|
-      format.html { redirect_to movie_genres_url, notice: "Movie genre was successfully destroyed." }
-      format.json { head :no_content }
+      format.html { redirect_to movie_genres_url, notice: "Gênero excluído com sucesso!" }
     end
   end
 

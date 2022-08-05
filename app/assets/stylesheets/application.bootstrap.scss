@@ -87,7 +87,8 @@ form .form-check-input:checked {
 
 .nav-pills .nav-item .nav-link.active,
 .primary,
-.btn-primary {
+.btn-primary,
+.alert-primary {
   color: #f2f2f7 !important;
   background-color: #ff375f !important;
 }
@@ -99,7 +100,11 @@ form .form-check-input:checked {
 
 .btn {
   padding: 0.5rem 1.5rem;
-  border: none !important;
+}
+
+.btn,
+.alert {
+  border: none;
 }
 
 tr {
