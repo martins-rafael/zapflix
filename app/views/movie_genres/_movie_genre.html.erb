@@ -1,7 +1,19 @@
-<div id="<%= dom_id movie_genre %>">
-  <p>
-    <strong>Name:</strong>
+<tr id="<%= dom_id movie_genre %>">
+  <td>
     <%= movie_genre.name %>
-  </p>
+  </td>
 
-</div>
+  <td>
+    <%= formatted_date(movie_genre.created_at) %>
+  </td>
+
+  <td class="d-flex justify-content-end">
+    <%= link_to edit_movie_genre_path(movie_genre) do %>
+      <%= image_tag 'icons/editIcon.png' %>
+    <% end %>
+
+    <%= button_to movie_genre, method: :delete, form: { data: { turbo_confirm: "Deseja realmente excluir este item?" }} do %>
+      <%= image_tag 'icons/deleteIcon.png' %>
+    <% end %>
+  </td>
+</tr>

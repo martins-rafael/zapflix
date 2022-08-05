@@ -1,9 +1,9 @@
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
 
 body {
   min-height: 100vh;
-  background-color: #2C2C2E;
+  background-color: #2c2c2e;
 }
 
 html {
@@ -20,7 +20,7 @@ main {
 }
 
 .bi {
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   pointer-events: none;
   fill: currentColor;
 }
@@ -32,7 +32,7 @@ main {
 
 #contentWrapper {
   padding: 36px;
-  background-color: #2C2C2E;
+  background-color: #2c2c2e;
   max-height: 100vh;
   overflow-y: scroll;
   margin: 0;
@@ -51,7 +51,7 @@ main {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(270deg, #1C1C1E 50.52%, rgba(28, 28, 30, 0) 100%);
+  background: linear-gradient(270deg, #1c1c1e 50.52%, rgba(28, 28, 30, 0) 100%);
 }
 
 h6 {
@@ -60,47 +60,64 @@ h6 {
   margin: 1rem !important;
 }
 
-form .form-group>label,
+form .form-group > label,
 form .list-group-item,
 form .form-control:focus {
-  color: #C7C7CC;
+  color: #c7c7cc;
 }
 
-form .form-group>input:focus {
-  border-color: #C7C7CC;
+form .form-group > input:focus {
+  border-color: #c7c7cc;
+  background: inherit;
 }
 
-form .form-group>input,
-form .form-group>textarea,
-form .form-group>select,
+form .form-group > input,
+form .form-group > textarea,
+form .form-group > select,
 form .list-group-item {
   color: #636366;
   border: 1px solid #636366;
+  background: inherit;
 }
 
 form .form-check-input:checked {
-  border-color: #FF375F;
-  background-color: #FF375F;
+  border-color: #ff375f;
+  background-color: #ff375f;
 }
 
 .nav-pills .nav-item .nav-link.active,
-.primary {
-  color: #F2F2F7 !important;
-  background-color: #FF375F !important;
+.primary,
+.btn-primary {
+  color: #f2f2f7 !important;
+  background-color: #ff375f !important;
 }
 
-.cancel {
-  color: #2C2C2E !important;
-  background-color: #C7C7CC !important;
+.btn-secondary {
+  color: #2c2c2e !important;
+  background-color: #c7c7cc !important;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: none !important;
 }
 
 tr {
-  color: #C7C7CC !important;
-  border-color: #1C1C1E !important;
+  color: #c7c7cc !important;
+  border-color: #1c1c1e !important;
 }
 
-tr>td {
+tr > td {
   font-weight: 300;
+}
+
+td a {
+  text-decoration: none;
+}
+
+td button {
+  background: none;
+  border: none;
 }
 
 td img {
@@ -109,19 +126,19 @@ td img {
 }
 
 .dark-gray-6 {
-  background-color: #1C1C1E !important;
+  background-color: #1c1c1e !important;
 }
 
 .dark-gray-5 {
-  background-color: #2C2C2E !important;
+  background-color: #2c2c2e !important;
 }
 
 .dark-gray-4 {
-  background-color: #3A3A3C !important;
+  background-color: #3a3a3c !important;
 }
 
 .dark-gray-3 {
-  background-color: #48484A !important;
+  background-color: #48484a !important;
 }
 
 .dark-gray-2 {
@@ -129,17 +146,17 @@ td img {
 }
 
 .light-gray-6 {
-  background-color: #F2F2F7 !important;
+  background-color: #f2f2f7 !important;
 }
 
 .light-gray-5 {
-  background-color: #E5E5EA !important;
+  background-color: #e5e5ea !important;
 }
 
 .light-gray-4 {
-  background-color: #D1D1D6 !important;
+  background-color: #d1d1d6 !important;
 }
 
 .light-gray-3 {
-  background-color: #C7C7CC !important;
+  background-color: #c7c7cc !important;
 }

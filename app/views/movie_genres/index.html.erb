@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Movie genres</h1>
-
-<div id="movie_genres">
-  <% @movie_genres.each do |movie_genre| %>
-    <%= render movie_genre %>
-    <p>
-      <%= link_to "Show this movie genre", movie_genre %>
-    </p>
-  <% end %>
+<div class="d-flex mb-5 justify-content-between">
+  <h3>Gêneros</h3>
+  <%= link_to "+ Novo", new_movie_genre_path, class: "btn btn-primary" %>
 </div>
 
-<%= link_to "New movie genre", new_movie_genre_path %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Criado em</th>
+      <th class="col-md-2 text-end" scope="col">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie_genres.each do |movie_genre| %>
+      <%= render movie_genre %>
+    <% end %>
+  </tbody>
+</table>
