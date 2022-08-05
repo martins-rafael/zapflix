@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Movie genres</h1>
+
+<div id="movie_genres">
+  <% @movie_genres.each do |movie_genre| %>
+    <%= render movie_genre %>
+    <p>
+      <%= link_to "Show this movie genre", movie_genre %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New movie genre", new_movie_genre_path %>
