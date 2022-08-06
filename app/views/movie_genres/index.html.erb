@@ -3,18 +3,8 @@
   <%= link_to "+ Novo", new_movie_genre_path, class: "btn btn-primary" %>
 </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Criado em</th>
-      <th class="col-md-2 text-end" scope="col">Ações</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @movie_genres.each do |movie_genre| %>
-      <%= render movie_genre %>
-    <% end %>
-  </tbody>
-</table>
+<% if @movie_genres.any? %>
+  <%= render(TableComponent.new(items: @movie_genres)) %>
+<% else %>
+  <%= render(EmptyPlaceholderComponent.new(text: 'gênero')) %>
+<% end %>

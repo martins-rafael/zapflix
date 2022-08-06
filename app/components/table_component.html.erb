@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Criado em</th>
+      <th class="col-md-2 text-end" scope="col">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <%= render item %>
+    <% end %>
+  </tbody>
+</table>
