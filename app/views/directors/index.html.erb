@@ -1,0 +1,10 @@
+<div class="d-flex mb-5 justify-content-between">
+  <h3>Diretores</h3>
+  <%= link_to "+ Novo", new_director_path, class: "btn btn-primary" %>
+</div>
+
+<% if @directors.any? %>
+  <%= render(TableComponent.new(items: @directors)) %>
+<% else %>
+  <%= render(EmptyPlaceholderComponent.new(text: 'diretor')) %>
+<% end %>

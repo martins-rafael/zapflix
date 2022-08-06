@@ -1,0 +1,25 @@
+<tr id="<%= dom_id director %>">
+  <td>
+    <%= director.name %>
+  </td>
+
+  <td>
+    <%= formatted_date(director.created_at) %>
+  </td>
+
+  <td class="d-flex justify-content-end">
+    <%= link_to edit_director_path(director) do %>
+      <%= image_tag 'icons/editIcon.png' %>
+    <% end %>
+
+    <button
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#confirmDelete_<%= dom_id director %>"
+    >
+      <%= image_tag 'icons/deleteIcon.png' %>
+    </button>
+
+    <%= render(ModalComponent.new(item: director))%>
+  </td>
+</tr>
