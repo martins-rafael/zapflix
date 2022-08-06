@@ -1,0 +1,25 @@
+<%= form_with(model: artist) do |form| %>
+  <% if artist.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+
+      <ul>
+        <% artist.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form>
+    <div class="form-group">
+      <%= form.label :name, "Nome" %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Zandaya " %>
+    </div>
+
+    <div class="d-flex justify-content-end mt-4">
+      <%= link_to "Cancelar", artists_path, class: "btn btn-secondary me-3" %>
+      <%= form.submit "Salvar", class: "btn btn-primary" %>
+    </div>
+  </form>
+<% end %>

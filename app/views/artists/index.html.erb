@@ -1,0 +1,10 @@
+<div class="d-flex mb-5 justify-content-between">
+  <h3>Artistas</h3>
+  <%= link_to "+ Novo", new_artist_path, class: "btn btn-primary" %>
+</div>
+
+<% if @artists.any? %>
+  <%= render(TableComponent.new(items: @artists)) %>
+<% else %>
+  <%= render(EmptyPlaceholderComponent.new(text: 'artista')) %>
+<% end %>

@@ -1,0 +1,25 @@
+<tr id="<%= dom_id artist %>">
+  <td>
+    <%= artist.name %>
+  </td>
+
+  <td>
+    <%= formatted_date(artist.created_at) %>
+  </td>
+
+  <td class="d-flex justify-content-end">
+    <%= link_to edit_artist_path(artist) do %>
+      <%= image_tag 'icons/editIcon.png' %>
+    <% end %>
+
+    <button
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#confirmDelete_<%= dom_id artist %>"
+    >
+      <%= image_tag 'icons/deleteIcon.png' %>
+    </button>
+
+    <%= render(ModalComponent.new(item: artist))%>
+  </td>
+</tr>
