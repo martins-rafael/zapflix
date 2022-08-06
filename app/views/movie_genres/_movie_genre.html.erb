@@ -12,8 +12,14 @@
       <%= image_tag 'icons/editIcon.png' %>
     <% end %>
 
-    <%= button_to movie_genre, method: :delete, form: { data: { turbo_confirm: "Deseja realmente excluir este item?" }} do %>
+    <button
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#confirmDelete_<%= dom_id movie_genre %>"
+    >
       <%= image_tag 'icons/deleteIcon.png' %>
-    <% end %>
+    </button>
+
+    <%= render(ModalComponent.new(item: movie_genre))%>
   </td>
 </tr>

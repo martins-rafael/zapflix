@@ -107,6 +107,11 @@ form .form-check-input:checked {
   border: none;
 }
 
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
 tr {
   color: #c7c7cc !important;
   border-color: #1c1c1e !important;
@@ -125,7 +130,8 @@ td button {
   border: none;
 }
 
-td img {
+td a img,
+td button img {
   max-width: 12px;
   margin: 4px;
 }

@@ -1,0 +1,24 @@
+<div class="modal fade" id="confirmDelete_<%= dom_id @item %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header dark-gray-5 justify-content-center">
+        <%= image_tag 'icons/warningIcon.png', class: "me-2" %>
+        <h5 class="modal-title text-center fw-bold" id="confirmDeleteLabel">
+          Atenção
+        </h5>
+      </div>
+
+      <div class="modal-body bg-dark p-5 text-center">
+        <h6 class="fw-bold">Deseja realmente excluir este item?</h6>
+        <p>Após a exclusão não será mais possível recuperar os dados!</p>
+      </div>
+
+      <div class="modal-footer dark-gray-5 justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <%= button_to "Excluir", @item, method: :delete, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
