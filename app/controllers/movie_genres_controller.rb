@@ -25,7 +25,7 @@ class MovieGenresController < ApplicationController
 
     respond_to do |format|
       if @movie_genre.save
-        format.html { redirect_to movie_genre_path, notice: "Gênero criado com sucesso!" }
+        format.html { redirect_to movie_genres_path, notice: "Gênero criado com sucesso!" }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
