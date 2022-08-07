@@ -1,0 +1,9 @@
+<% if @release_date > Date.today %>
+  <span class="badge position-absolute top-0 start-0 p-2 bg-primary">
+    Em breve
+  </span>
+<% elsif @release_date > 30.days.ago %>
+  <span class="badge position-absolute top-0 start-0 p-2 bg-success">
+    Lançamento
+  </span>
+<% end %>

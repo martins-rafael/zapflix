@@ -1,6 +1,7 @@
 <div class="card mb-3 col-12 dark-gray-6">
   <div class="row g-0 rounded dark-gray-6">
     <div class="col-md-6 mainCard">
+      <%= render(BadgeComponent.new(release_date: @movie[:published_at])) %>
       <%= image_tag @movie[:cover_url] %>
     </div>
 
