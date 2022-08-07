@@ -1,0 +1,27 @@
+<div class="col-sm-4 card-group">
+  <div class="card dark-gray-6">
+    <%= image_tag @movie[:cover_url], class: 'card-img-top' %>
+
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <%= @movie[:title] %>
+      </h5>
+
+      <p class="card-text">
+        <span class="text-muted">Diretor:</span>
+        <%= @movie.director[:name] %>
+      </p>
+
+      <p class="card-text">
+        <span class="text-muted">Lançamento:</span>
+        <%= @movie[:published_at].strftime('%Y') %>
+      </p>
+
+      <br>
+
+      <p class="card-text synopsis">
+        <%= @movie[:synopsis]%>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,78 +1,9 @@
 <% if @latest_movies.any? %>
-  <div class="card mb-3 col-12 dark-gray-6">
-    <div class="row g-0 rounded dark-gray-6">
-      <div class="col-md-6 mainCard">
-        <%= image_tag @latest_movies.last[:cover_url] %>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card-body">
-          <h5 class="card-title fw-bold">
-            <%= @latest_movies.last[:title] %>
-          </h5>
-
-          <p class="card-text">
-            <span class="text-muted">Diretor:</span>
-            <%= @latest_movies.last.director[:name] %>
-          </p>
-
-          <p class="card-text">
-            <span class="text-muted">Estreia:</span>
-            <%= formatted_date_without_hour(@latest_movies.last[:published_at]) %>
-          </p>
-
-          <p class="card-text">
-            <span class="text-muted">Gênero:</span>
-            <%= @latest_movies.last.movie_genre[:name] %>
-          </p>
-
-          <br>
-
-          <p class="card-text">
-            <span class="text-muted">Elenco:</span>
-            <%= @latest_movies.last.artists.last(5).map { |artist| artist.name }.join(' - ')%>
-            ...
-          </p>
-
-          <br>
-
-          <p class="card-text synopsis-reduced">
-            <%= @latest_movies.last[:synopsis]%>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render(MainCardComponent.new(movie: @latest_movies.last)) %>
 
   <div class="row">
     <% @latest_movies.take(3).reverse_each do |movie| %>
-      <div class="col-sm-4 card-group">
-        <div class="card dark-gray-6">
-          <%= image_tag movie[:cover_url], class: 'card-img-top' %>
-
-          <div class="card-body">
-            <h5 class="card-title fw-bold">
-              <%= movie[:title] %>
-            </h5>
-
-            <p class="card-text">
-              <span class="text-muted">Diretor:</span>
-              <%= movie.director[:name] %>
-            </p>
-
-            <p class="card-text">
-              <span class="text-muted">Lançamento:</span>
-              <%= formatted_date_only_year(movie[:published_at]) %>
-            </p>
-
-            <br>
-
-            <p class="card-text synopsis">
-              <%= movie[:synopsis]%>
-            </p>
-          </div>
-        </div>
-      </div>
+      <%= render(SmallCardComponent.new(movie: movie)) %>
     <% end %>
   </div>
 <% else %>
