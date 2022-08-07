@@ -38,20 +38,41 @@ main {
   margin: 0;
 }
 
-.mainCard img {
-  max-width: 100%;
-  height: auto;
+.mainCard {
   position: relative;
 }
 
-.mainCard img::after {
+.mainCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mainCard::after {
   content: "";
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(270deg, #1c1c1e 50.52%, rgba(28, 28, 30, 0) 100%);
+  background: linear-gradient(270deg, #1c1c1eaa 50.52%, rgba(28, 28, 30, 0) 100%);
+}
+
+.card-body p {
+  margin: 0;
+  color: #d1d1d6;
+}
+
+.synopsis,
+.synopsis-reduced {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+
+  &-reduced {
+    -webkit-line-clamp: 2;
+  }
 }
 
 h6 {
