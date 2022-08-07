@@ -66,7 +66,8 @@ form .form-control:focus {
   color: #c7c7cc;
 }
 
-form .form-group > input:focus {
+form .form-group > input:focus,
+form .form-group > textarea:focus {
   border-color: #c7c7cc;
   background: inherit;
 }
@@ -74,15 +75,45 @@ form .form-group > input:focus {
 form .form-group > input,
 form .form-group > textarea,
 form .form-group > select,
+form .form-check,
 form .list-group-item {
   color: #636366;
   border: 1px solid #636366;
   background: inherit;
 }
 
+form .form-check {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+
+  .form-check-input {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
+
 form .form-check-input:checked {
   border-color: #ff375f;
   background-color: #ff375f;
+}
+
+form .form-group > textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+form .form-group > select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23636366' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+
+form .form-group > select option {
+  background: #2c2c2e;
 }
 
 .nav-pills .nav-item .nav-link.active,

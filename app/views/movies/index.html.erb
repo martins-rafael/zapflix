@@ -1,0 +1,27 @@
+<div class="d-flex mb-5 justify-content-between">
+  <h3>Filmes</h3>
+  <%= link_to "+ Novo", new_movie_path, class: "btn btn-primary" %>
+</div>
+
+<% if @movies.any? %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Diretor</th>
+        <th scope="col">Gênero</th>
+        <th scope="col">Estreia</th>
+        <th class="col-md-2 text-end" scope="col">Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @movies.each do |movie| %>
+        <%= render movie %>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+  <%= render(EmptyPlaceholderComponent.new(text: 'filme')) %>
+<% end %>

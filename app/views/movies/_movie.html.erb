@@ -1,0 +1,33 @@
+<tr id="<%= dom_id movie %>">
+  <td>
+    <%= movie.title %>
+  </td>
+
+  <td>
+    <%= movie.director[:name] %>
+  </td>
+
+  <td>
+    <%= movie.movie_genre[:name] %>
+  </td>
+
+  <td>
+    <%= formatted_date_without_hour(movie.published_at) %>
+  </td>
+
+  <td class="d-flex justify-content-end">
+    <%= link_to edit_movie_path(movie) do %>
+      <%= image_tag 'icons/editIcon.png' %>
+    <% end %>
+
+    <button
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#confirmDelete_<%= dom_id movie %>"
+    >
+      <%= image_tag 'icons/deleteIcon.png' %>
+    </button>
+
+    <%= render(ModalComponent.new(item: movie))%>
+  </td>
+</tr>

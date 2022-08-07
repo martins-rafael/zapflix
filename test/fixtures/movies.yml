@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  cover_url: MyString
+  published_at: 2022-08-06
+  director: one
+  movie_genre: one
+  synopsis: MyText
+
+two:
+  title: MyString
+  cover_url: MyString
+  published_at: 2022-08-06
+  director: two
+  movie_genre: two
+  synopsis: MyText
