@@ -97,10 +97,13 @@ form .form-group > input,
 form .form-group > textarea,
 form .form-group > select,
 form .form-check,
-form .list-group-item {
+form .list-group-item,
+form .field_with_errors > input,
+form .field_with_errors > select,
+form .field_with_errors > textarea {
   color: #636366;
   border: 1px solid #636366;
-  background: inherit;
+  background: inherit !important;
 }
 
 form .form-check {
@@ -111,6 +114,12 @@ form .form-check {
     margin-left: 0;
     margin-right: 0.5rem;
   }
+}
+
+form .field_with_errors > input,
+form .field_with_errors > select,
+form .field_with_errors > textarea {
+  border: 1px solid #ff5555;
 }
 
 form .form-check-input:checked {

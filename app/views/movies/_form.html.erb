@@ -1,7 +1,7 @@
 <%= form_with(model: movie) do |form| %>
   <% if movie.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(movie.errors.count, "erro(s)") %> impediram esse filme de ser salvo:</h2>
+      <h2><%= pluralize(movie.errors.count, "erro(s)") %> impediu esse filme de ser salvo:</h2>
 
       <ul>
         <% movie.errors.each do |error| %>
