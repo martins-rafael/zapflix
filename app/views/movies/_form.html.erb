@@ -1,7 +1,7 @@
 <%= form_with(model: movie) do |form| %>
   <% if movie.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+      <h2><%= pluralize(movie.errors.count, "erro(s)") %> impediram esse filme de ser salvo:</h2>
 
       <ul>
         <% movie.errors.each do |error| %>
@@ -14,37 +14,37 @@
   <form>
     <div class="row">
       <div class="form-group">
-        <%= form.label :title, "Título" %>
+        <%= form.label :title %>
         <%= form.text_field :title, class: "form-control", placeholder: "Spider-Man" %>
       </div>
 
       <div class="form-group mt-3 col-6">
-        <%= form.label :cover_url, "Capa" %>
+        <%= form.label :cover_url %>
         <%= form.text_field :cover_url, class: "form-control", placeholder: "Procurar imagem..." %>
       </div>
 
       <div class="form-group mt-3 col-6">
-        <%= form.label :published_at, "Estreia" %>
+        <%= form.label :published_at %>
         <%= form.date_field :published_at, class: "form-control" %>
       </div>
 
       <div class="form-group mt-3 col-6">
-        <%= form.label :director_id, "Diretor" %>
+        <%= form.label :director_id %>
         <%= form.collection_select(:director_id, Director.all, :id, :name, { :prompt => "Selecione o diretor" }, class: "form-select") %>
       </div>
 
       <div class="form-group mt-3 col-6">
-        <%= form.label :movie_genre_id, "Gênero" %>
+        <%= form.label :movie_genre_id %>
         <%= form.collection_select(:movie_genre_id, MovieGenre.all, :id, :name, { :prompt => "Selecione o gênero" }, class: "form-select") %>
       </div>
 
       <div class="form-group mt-3">
-        <%= form.label :synopsis, "Sinopse" %>
+        <%= form.label :synopsis%>
         <%= form.text_area :synopsis, class: "form-control", placeholder: "Breve descrição do filme" %>
       </div>
 
       <div class="form-group mt-3 row">
-        <%= form.label :artists_id, "Elenco" %>
+        <%= form.label :artists_id %>
 
         <%= form.collection_check_boxes(:artist_ids, Artist.all, :id, :name) do |f| %>
           <div class="form-check col-3 ms-2 mb-2">

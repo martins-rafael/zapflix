@@ -17,6 +17,10 @@ module ProjetoAcademy2022
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
+    config.time_zone = "Brasilia"
+    config.active_record.default_timezone = :local
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.rb,ybl').to_s]
+    config.i18n.default_locale = 'pt-BR'
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
