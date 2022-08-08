@@ -1,0 +1,68 @@
+form {
+  .form-group > label,
+  .list-group-item,
+  .form-control:focus {
+    color: var(--color-light-gray-3);
+  }
+
+  .form-group > input:focus,
+  .form-group > textarea:focus {
+    border-color: var(--color-light-gray-3);
+    background: inherit;
+  }
+
+  .form-group > input,
+  .form-group > textarea,
+  .form-group > select,
+  .form-check,
+  .list-group-item,
+  .field_with_errors > input,
+  .field_with_errors > select,
+  .field_with_errors > textarea {
+    color: var(--color-dark-gray-2);
+    border: 1px solid var(--color-dark-gray-2);
+    background: inherit !important;
+  }
+
+  .form-check {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+
+    .form-check-input {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .field_with_errors > input,
+  .field_with_errors > select,
+  .field_with_errors > textarea {
+    border: 1px solid #ff5555;
+  }
+
+  .form-check-input:checked {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  .form-group {
+    & > textarea {
+      min-height: 80px;
+      resize: none;
+    }
+
+    & > select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23636366' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.7em top 50%, 0 0;
+      background-size: 0.65em auto, 100%;
+    }
+
+    & > select option {
+      background: var(--color-dark-gray-5);
+    }
+  }
+}

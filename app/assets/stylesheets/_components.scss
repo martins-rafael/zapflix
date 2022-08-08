@@ -1,0 +1,38 @@
+.bi {
+  vertical-align: -0.125em;
+  pointer-events: none;
+  fill: currentColor;
+}
+
+.nav-pills .nav-item .nav-link.active,
+.primary,
+.btn-primary,
+.alert-primary,
+.bg-primary {
+  color: var(--color-light-gray-6) !important;
+  background-color: var(--color-primary) !important;
+}
+
+.btn-secondary {
+  color: var(--color-dark-gray-5) !important;
+  background-color: var(--color-light-gray-3) !important;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+}
+
+.btn,
+.alert {
+  border: none;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.card-body p {
+  margin: 0;
+  color: var(--color-light-gray-4);
+}

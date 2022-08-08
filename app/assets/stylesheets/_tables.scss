@@ -1,0 +1,25 @@
+tr {
+  color: var(--color-light-gray-3) !important;
+  border-color: var(--color-dark-gray-6) !important;
+
+  & > td {
+    font-weight: 300;
+  }
+}
+
+td {
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+
+  a img,
+  button img {
+    max-width: 12px;
+    margin: 4px;
+  }
+}
