@@ -39,7 +39,7 @@ ZapFlix é o projeto de finalização do curso Kazap Academy 2022, pensado para 
 
 Algumas das tecnologias utilizadas no desenvolvimento do projeto:
 
-- [Ruby](https://www.ruby-lang.org/pt/)
+- [Ruby](https://www.ruby-lang.org/en/)
 - [Rails](https://rubyonrails.org/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Sass](https://sass-lang.com/)
@@ -50,7 +50,7 @@ Algumas das tecnologias utilizadas no desenvolvimento do projeto:
 
 ## Requisitos
 
-Para rodar a aplicação, você precisa ter instalada a versão `16.x` do Node[https://nodejs.org/en/] e ruby na versão `3.1.2`.
+Para rodar a aplicação, você precisa ter instalada a versão `16.x` do [Node](https://nodejs.org/en/) e [Ruby](https://www.ruby-lang.org/en/) na versão `3.1.2`.
 
 
 ```bash
